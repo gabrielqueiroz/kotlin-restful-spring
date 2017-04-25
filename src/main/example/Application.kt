@@ -16,6 +16,6 @@ fun main (args: Array<String>) {
     val context = SpringApplication.run(Application::class.java, *args)
     val beans   = context.getBeanDefinitionNames()
     sort(beans)
-    Arrays.stream(beans).forEach{ bean -> LoggerFactory.getLogger("Application").info("BEAN: {}", bean) }
+    Arrays.stream(beans).forEach{ bean -> LoggerFactory.getLogger(Application::class.java).info("BEAN: {}", bean) }
 }
 
